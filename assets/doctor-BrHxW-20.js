@@ -1,0 +1,1 @@
+var e=`/yty/assets/doctor-CGmFPFmy.png`;export{e as t};

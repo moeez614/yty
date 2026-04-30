@@ -1,0 +1,1 @@
+import"./chunk-CilyBKbf.js";import{p as e,s as t}from"./index-Bufu6Xgn.js";e();var n=t(),r=()=>(0,n.jsx)(`div`,{className:`settings-dr`,children:`kal kara ga`});export{r as default};
