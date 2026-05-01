@@ -1,5 +1,3 @@
-import React from "react";
-
 import { useState, useRef } from "react";
 
 const SPECIALIZATIONS = [
@@ -485,5 +483,3 @@ export default function DoctorProfileEdit() {
     </div>
   );
 }
-
-export default DoctorPortal

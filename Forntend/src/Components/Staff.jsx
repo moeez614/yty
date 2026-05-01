@@ -20,7 +20,7 @@ const Staff = () => {
   const handlesubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:5000/api/staff`, {
+      const response = await axios.post( import.meta.env.VITE_API_URL + '/api/staff', {
         Doctors,
         Nurses,
         Paramedics,
@@ -37,11 +37,11 @@ const Staff = () => {
   useEffect(() => {
     const power = async () => {
       try {
-        await axios.get(`http://localhost:5000/api/staff`)
+        await axios.get(import.meta.env.VITE_API_URL + '/api/staff')
           .then(res => setDATA(res.data))
           .catch(err => console.log(err))
 
-        await axios.get(`http://localhost:5000/api/record`)
+        await axios.get(import.meta.env.VITE_API_URL + '/api/record')
           .then(res => setRecord(res.data))
           .catch(err => console.log(err))
       } catch (error) {
@@ -53,7 +53,7 @@ const Staff = () => {
 
   const deleteme = async (id) => {
     try {
-      await axios.delete(`http://localhost:5000/api/record/${id}`)
+      await axios.delete(import.meta.env.VITE_API_URL + '/api/record/${id}')
       setRecord(Record.filter(data => data._id !== id))
     }
     catch (error) {

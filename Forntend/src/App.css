@@ -2650,11 +2650,135 @@
     padding: 10px;
 }
 
-.settings-dr {
-    background-image: url(./assets//appointment.jpg);
-    background-size: cover;
-    background-position: center;
-    height: 100vh;
-    width: 100%;
-    background-attachment: fixed;
+.setting-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    color: white;
+    background-color: #38703b;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.setting-header img {
+    cursor: pointer;
+    margin: 10px;
+    height: 50px;
+}
+
+.seting {
+    background-color: aliceblue;
+}
+
+.setting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.setting1 {
+    background-color: white;
+    padding: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 30px;
+    width: 70%;
+}
+
+.setting1 img {
+    width: 70px;
+    border-radius: 50%;
+    padding: 10px;
+    aspect-ratio: 1 / 1;
+    border: 2px solid #81c2fc;
+
+}
+
+.setting1 h3 {
+    font-size: 22px;
+    font-weight: 600;
+    color: #0f5a99;
+}
+
+.setting1 h4 {
+    font-size: 14px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.758);
+    padding: 10px 0;
+}
+.setting1 section {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.setting1 section h5 {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(0, 128, 0, 0.864);
+    background-color: rgba(126, 191, 126, 0.145);
+    padding: 5px 10px;
+    border-radius: 20px;
+}
+
+.setting-all{
+    background-color: white;
+    padding: 30px;
+    border: 1px solid gainsboro;
+    border-radius: 10px;
+    margin: 10px;
+    width: 70%;
+}
+.setting-title{
+    color: #0f5a99;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 20px;
+    border-bottom: 2px solid #0f5b9981;
+}
+
+.setting-flex{
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-between; */
+    /* align-items: center; */
+    padding: 10px 0;
+    /* border-bottom: 1px solid gainsboro; */
+}
+.setting-row{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+.setting-flex label{
+    color: #337836;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 0;
+}
+.setting-flex input{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    width: 400px;
+}
+.setting-flex input:focus{
+    outline: 1px solid #146ab5;
+}
+.setting-flex textarea{
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    resize: vertical; 
+    width: calc(100% - 40px);   
+}
+.setting-flex textarea:focus{
+    outline: 1px solid #146ab5;
 }

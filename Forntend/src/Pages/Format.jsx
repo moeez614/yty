@@ -52,14 +52,14 @@ const Format = () => {
                             </div>
                             <div>
                                 <h5>Patient Id</h5>
-                                <input type="text" placeholder='Patient Id' />
+                                <input type="text" placeholder='CNIC / Passport / ID' />
                             </div>
                         </div>
                         <div className='hojaim'>
                             <div className='hojaim-new'>
                                 <h5>Age / Gender</h5>
                                 <div>
-                                    <input type="text" placeholder='Age' />
+                                    <input type="text" placeholder='e.g. 25,28' />
                                     <select name="" id="">
                                         <option value="Male">Male</option>
                                         <option value="Female">Female</option>
@@ -68,7 +68,7 @@ const Format = () => {
                             </div>
                             <div>
                                 <h5>Contact</h5>
-                                <input type="text" placeholder='Contact' />
+                                <input type="text" placeholder='+92 301 1234567' />
                             </div>
                         </div>
                         {/* comment */}
@@ -76,52 +76,52 @@ const Format = () => {
                         <div className='hojaim'>
                             <div>
                                 <h5>Report Title</h5>
-                                <input type="text" placeholder='Report title' />
+                                <input type="text" placeholder='e.g. Chest X-ray' />
                             </div>
                             <div>
                                 <h5>Report Date</h5>
-                                <input type="date" placeholder='Patient Id' />
+                                <input type="date" placeholder='2/3/2023' />
                             </div>
                         </div>
                         <div className='hojaim'>
                             <div>
                                 <h5>Referring Physician (optional)</h5>
-                                <input type="text" placeholder='Physician' />
+                                <input type="text" placeholder='e.g Dr. John Doe' />
                             </div>
                         </div>
                         <h4>3. Clinical Details</h4>
                         <div className='hojaim'>
-                            <input type="text" placeholder='Clinical Details' />
+                            <input type="text" placeholder='Pain Level, Symptoms, Diagnosis' />
                         </div>
                         <h4>4. Finding</h4>
                         <div className='hojaim'>
                             <div>
                                 <h5>Blood Pressure</h5>
-                                <input type="text" placeholder='Blood Pressure' />
+                                <input type="text" placeholder='80/120mmhg' />
                             </div>
                             <div>
                                 <h5>Heart Rate</h5>
-                                <input type="text" placeholder='Heart Rate' />
+                                <input type="text" placeholder='60bpm' />
                             </div>
                         </div>
                         <div className='hojaim'>
                             <div>
-                                <h5>Temprature</h5>
-                                <input type="text" placeholder='Tempreture (f)' />
+                                <h5>Temprature(F)</h5>
+                                <input type="text" placeholder='90°F' />
                             </div>
                             <div>
                                 <h5>Oxygen Saturation</h5>
-                                <input type="text" placeholder='Oxygen Saturation' />
+                                <input type="text" placeholder='97%' />
                             </div>
                         </div>
                         <div className='hojaim'>
                             <div>
                                 <h5>BMI</h5>
-                                <input type="text" placeholder='BMI' />
+                                <input type="text" placeholder='22.5' />
                             </div>
                             <div>
                                 <h5>Respiratory Rate</h5>
-                                <input type="text" placeholder='Respiratory rate' />
+                                <input type="text" placeholder='16/min' />
                             </div>
                         </div>
                         <h4>5. Diagnosis</h4>
@@ -161,7 +161,7 @@ const Format = () => {
                         </div>
                         <h4>7. Doctor Notes</h4>
                         <div className='hojaim'>
-                            <input type="text" placeholder='Details' />
+                            <input type="text" placeholder='Recomendation / Notes' />
                         </div>
                         <h4>SIGNATURE</h4>
                         <div className='hojaim'>
@@ -176,7 +176,7 @@ const Format = () => {
                 <section className="report-right sanjha" ref={reportRef}>
                         <div className="format-header">
                             <div className='format-logo'>
-                                <img src={whitelogo} alt="" width={100} />
+                                <img src={whitelogo} alt="logo" width={100} />
                                 <h4>Allied Hospital <br />
                                     <span>Multi Speciality Hospital</span>
                                 </h4>
@@ -266,7 +266,7 @@ const Format = () => {
                                         <h4 className='format-black'>MBBS</h4>
                                         <h4 className='format-black'>Reg No. 123456</h4>
                                     </article>
-                                    <img src={whitelogo} alt="" width={100} />
+                                    <img src={whitelogo} alt="logo" width={100} />
                                 </div>
                             </div>
                         </div>

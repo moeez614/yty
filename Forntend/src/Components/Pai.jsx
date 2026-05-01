@@ -15,7 +15,7 @@ const Pai = () => {
         </section>
         <section style={{ paddingLeft: '20' }}>
           <NavLink><i className="fa-regular fa-bell"></i></NavLink>
-          <NavLink to={"settings"}><i className="fa-solid fa-gear setkar"></i></NavLink>
+          <NavLink to={"/settings"}><i className="fa-solid fa-gear setkar"></i></NavLink>
         </section>
       </div>
     </div>

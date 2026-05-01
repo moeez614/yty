@@ -11,7 +11,7 @@ const Appointment = lazy(() => import('./Pages/Appointment'))
 const Doctor = lazy(() => import('./Pages/Doctor'))
 const Register = lazy(() => import('./Components/Register'))
 const Drprofile = lazy(() => import('./Pages/Dr_profile'))
-const Doctorclaude = lazy(() => import('./Layout/DoctorPortal'))
+const Doctorclaude = lazy(() => import('./Layout/DoctorProfileEdit'))
 const Googlemap = lazy(() => import('./Components/Googlemap'))
 const Staff = lazy(() => import('./Components/Staff'))
 const Disease = lazy(() => import('./Components/Disease'))
@@ -26,7 +26,7 @@ import DrMain from './Pages/DrMain'
 const DrMain2 = lazy(() => import('./Pages/DrMain2'))
 const Medicalreport = lazy(() => import('./Pages/Medicalreport'))
 const Schedule = lazy(() => import('./Pages/Schedule'))
-const Forat = lazy(() => import('./Pages/Format'))
+const Format = lazy(() => import('./Pages/Format'))
 const Settings = lazy(() => import('./Pages/Settings'))
 
 function App() {
@@ -136,9 +136,18 @@ function App() {
             <Route path='today_patient' element={<DrMain2 />}></Route>
             <Route path='medical_report' element={<Medicalreport />}></Route>
             <Route path='schedule' element={<Schedule />}></Route>
-            <Route path='settings' element={<Settings />}></Route>
           </Route>
-            <Route path='/report' element={<Forat />}></Route>
+          <Route path='/report' element={
+            <Suspense fallback={<Loader />}>
+              <Format />
+            </Suspense>
+          }></Route>
+          <Route path='/settings' element={
+              <Suspense fallback={<Loader />}>
+                <Settings />
+              </Suspense>
+            }>
+            </Route>
 
         </Routes>
       </HashRouter>

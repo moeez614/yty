@@ -47,7 +47,7 @@ const DrDashboard = () => {
                             <h5>Department</h5>
                         </div>
                     </div>
-                    <NavLink to={"settings"}><i className="fa-solid fa-gear"></i>Setting</NavLink>
+                    <NavLink to={"/settings"}><i className="fa-solid fa-gear"></i>Setting</NavLink>
                     <button onClick={logout}><i className="fa-solid fa-arrow-right-from-bracket"></i>Logout</button>
                 </div>
             </section>
