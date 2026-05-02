@@ -2400,8 +2400,13 @@
     padding: 10px;
     height: fit-content;
     font-family: "Open Sans", sans-serif;
-    /* font-family: "Montserrat", sans-serif; */
-    /* font-family: "Dancing Script", cursive; */
+}
+
+.wakhai {
+    position: absolute;
+    top: 50px;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .report-left form h4 {
@@ -2711,6 +2716,7 @@
     color: rgba(0, 0, 0, 0.758);
     padding: 10px 0;
 }
+
 .setting1 section {
     display: flex;
     flex-direction: row;
@@ -2726,7 +2732,7 @@
     border-radius: 20px;
 }
 
-.setting-all{
+.setting-all {
     background-color: white;
     padding: 30px;
     border: 1px solid gainsboro;
@@ -2734,7 +2740,8 @@
     margin: 10px;
     width: 70%;
 }
-.setting-title{
+
+.setting-title {
     color: #0f5a99;
     font-size: 16px;
     font-weight: 600;
@@ -2742,7 +2749,7 @@
     border-bottom: 2px solid #0f5b9981;
 }
 
-.setting-flex{
+.setting-flex {
     display: flex;
     flex-direction: column;
     /* justify-content: space-between; */
@@ -2750,35 +2757,192 @@
     padding: 10px 0;
     /* border-bottom: 1px solid gainsboro; */
 }
-.setting-row{
+
+.setting-row {
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
-.setting-flex label{
+
+.setting-flex label {
     color: #337836;
     font-size: 14px;
     font-weight: 500;
     padding: 10px 0;
 }
-.setting-flex input{
+
+.setting-flex input {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid gainsboro;
     width: 400px;
 }
-.setting-flex input:focus{
+
+.setting-flex input:focus {
     outline: 1px solid #146ab5;
 }
-.setting-flex textarea{
+
+.setting-flex textarea {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid gainsboro;
-    resize: vertical; 
-    width: calc(100% - 40px);   
+    resize: vertical;
+    width: calc(100% - 40px);
 }
-.setting-flex textarea:focus{
+
+.setting-flex textarea:focus {
     outline: 1px solid #146ab5;
+}
+
+/* From Uiverse.io by arghyaBiswasDev */
+/* The switch - the box around the slider */
+.switch {
+    font-size: 17px;
+    position: relative;
+    display: inline-block;
+    width: 3.5em;
+    height: 0.6em;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+/* The slider */
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #fff;
+    border: 1px solid #adb5bd;
+    transition: .4s;
+    border-radius: 30px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 1.4em;
+    width: 1.4em;
+    border-radius: 20px;
+    left: 0.27em;
+    bottom: 0.25em;
+    background-color: #adb5bd;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #007bff;
+    border: 1px solid #007bff;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #007bff;
+}
+
+input:checked+.slider:before {
+    transform: translateX(1.4em);
+    background-color: #fff;
+}
+
+.toggle {
+    display: flex;
+    margin-top: 20px;
+    gap: 14px;
+}
+
+.toggle h5 {
+    font-size: 14px;
+    font-weight: 500;
+    color: #146ab5;
+}
+
+.toggle p {
+    font-size: 12px;
+    font-weight: 400;
+    color: gray;
+}
+
+.afki {
+    align-items: center;
+}
+
+.abki {
+    height: 2em;
+}
+
+.afki h4 {
+    font-size: 16px;
+    font-weight: 600;
+    color: rgba(0, 0, 0, 0.758);
+    padding: 10px 0;
+    margin-right: 10px;
+}
+
+.pakistan {
+    border: 1px solid rgba(171, 169, 169, 0.5);
+    border-radius: 5px;
+    height: fit-content;
+    background-color: white;
+    padding: 10px;
+}
+
+.pakistan input {
+    border: none;
+    outline: none;
+    background-color: white;
+}
+
+.pakistan i {
+    color: #007bff;
+}
+
+.time {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.not-found {
+    color: grey;
+}
+
+.save-cancel {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.save {
+    padding: 10px 50px;
+    border-radius: 5px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.cancel {
+    padding: 10px 30px;
+    border-radius: 5px;
+    background-color: white;
+    color: #007bff;
+    border: 1px solid #007bff;
+    cursor: pointer;
+}
+
+.blur {
+    background-color: gainsboro;
+    filter: blur(1);
 }
