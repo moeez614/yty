@@ -1,6 +1,7 @@
 import { useState, lazy, Suspense } from 'react'
 import './App.css'
 import { HashRouter, Route, Routes } from 'react-router-dom'
+import { GoogleOAuthProvider } from '@react-oauth/google';
 // import Gate from './Components/Gate'
 const Gate = lazy(() => import('./Components/Gate'))
 import Logo from './Layout/Logo'
@@ -35,6 +36,7 @@ function App() {
     <>
 
       <HashRouter>
+        <GoogleOAuthProvider clientId={import.meta.env.VITE_GOOGLE_CLIENT_ID}>
         <Routes>
           <Route path='/' element={
             <Suspense fallback={<Loader />}>
@@ -150,6 +152,7 @@ function App() {
             </Route>
 
         </Routes>
+        </GoogleOAuthProvider>
       </HashRouter>
     </>
   )

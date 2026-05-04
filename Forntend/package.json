@@ -13,6 +13,7 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@react-oauth/google": "^0.13.5",
     "axios": "^1.15.2",
     "chart.js": "^4.5.1",
     "date-fns": "^4.1.0",
