@@ -6,7 +6,8 @@ const connectDB  =async ()=>{
         console.log(`MongoDB Connected at filing system`);
     }
     catch(err){
-        console.log(err);
+        await mongoose.connect(process.env.MONGO_DEMO)
+        console.log(err + " And Connected on Localhost");
     }
 }
 

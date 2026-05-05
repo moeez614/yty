@@ -29,6 +29,7 @@ const Medicalreport = lazy(() => import('./Pages/Medicalreport'))
 const Schedule = lazy(() => import('./Pages/Schedule'))
 const Format = lazy(() => import('./Pages/Format'))
 const Settings = lazy(() => import('./Pages/Settings'))
+const GoogleLogin = lazy(() => import('./Components/common/GoogleLogin'))
 
 function App() {
 
@@ -46,6 +47,12 @@ function App() {
           <Route path='/h' element={
             <Suspense fallback={<Loader />}>
               <Doctorclaude />
+            </Suspense>
+          }></Route>
+          {/* dashboard */}
+          <Route path='/dashboard' element={
+            <Suspense fallback={<Loader />}>
+              <GoogleLogin />
             </Suspense>
           }></Route>
           <Route path='/googlemap' element={

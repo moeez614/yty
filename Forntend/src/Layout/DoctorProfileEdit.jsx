@@ -16,6 +16,7 @@ const DoctorProfileEdit = () => {
 
       console.log(response.data);
       localStorage.setItem("token", response.data.token);
+      navigate("/dashboard");
     }
     catch (err) {
       console.log(err);

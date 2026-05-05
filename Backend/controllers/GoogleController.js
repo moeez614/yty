@@ -6,7 +6,6 @@ const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID);
 exports.googleLogin = async (req, res) => {
   try {
     const { token } = req.body;
-    console.log(token);
     // verify token
     const ticket = await client.verifyIdToken({
       idToken: token,
@@ -15,7 +14,6 @@ exports.googleLogin = async (req, res) => {
 
     const { name, email, picture } = ticket.getPayload();
 
-    // check user
     let user = await User.findOne({ email });
 
     if (!user) {
@@ -26,7 +24,7 @@ exports.googleLogin = async (req, res) => {
     const appToken = jwt.sign(
       { id: user._id },
       process.env.JWT_SECRET,
-      { expiresIn: "7d" }
+      { expiresIn: "1d" }
     );
 
     res.json({ user, token: appToken });
@@ -35,3 +33,22 @@ exports.googleLogin = async (req, res) => {
     res.status(401).json({ error: "Invalid Google token" });
   }
 };
+
+exports.talash = async(req , res)=>{
+  try{
+    const authHeader = req.headers.authorization;
+    if (!authHeader) {
+      return res.status(401).json({ error: "No token provided" });
+    }
+    const token = authHeader.split(" ")[1];
+    const decoded = jwt.verify(token, process.env.JWT_SECRET);
+    const user = await User.findById(decoded.id);
+    if (!user) {
+      return res.status(404).json({ error: "User not found" });
+    }
+    res.json(user);
+  }
+  catch(err){
+    res.status(404).json({ error: "not founda" });
+  }
+}
