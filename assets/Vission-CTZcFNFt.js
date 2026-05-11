@@ -1,0 +1,1 @@
+import"./chunk-CilyBKbf.js";import{h as e,s as t}from"./index-B0t0rHNF.js";e();var n=t(),r=()=>(0,n.jsx)(`div`,{children:`😭`});export{r as default};
