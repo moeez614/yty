@@ -52,10 +52,10 @@ const Gate = () => {
             !dropdown &&
             <ul className='dropdown-listed-items'>
               <li>
-                <NavLink>Vision & Mission</NavLink>
+                <NavLink to={'/vision'}>Vision & Mission</NavLink>
               </li>
               <li>
-                <NavLink>Infrastrcture</NavLink>
+                <NavLink to={'/infrastructure'}>Infrastructure</NavLink>
               </li>
               <li>
                 <NavLink>Certification & Awards</NavLink>
@@ -113,7 +113,7 @@ const Gate = () => {
                 <NavLink>Lab Tests</NavLink>
               </li>
               <li>
-                <NavLink>Pharmacy</NavLink>
+                <NavLink to={'/pharmacy'}>Pharmacy</NavLink>
               </li>
               <li>
                 <NavLink>Ambulance</NavLink>

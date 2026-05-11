@@ -19,6 +19,11 @@ const Disease = lazy(() => import('./Components/Disease'))
 const Patientlogin = lazy(() => import('./Layout/Patientlogin'))
 const Patientregester = lazy(() => import('./Layout/Patientregester'))
 const Myprofile = lazy(() => import('./Pages/Myprofile'))
+const Vission = lazy(() => import('./Pages/Vission')) //delete
+const Vh = lazy(() => import('./Pages/HospitalVisionMission'))
+const Infrastructure = lazy(() => import('./Pages/HospitalInfrastructure'))
+const Pharmacy = lazy(() => import('./Pages/HospitalPharmacy'))
+
 // loader
 import Loader from './Components/Loader'
 import PrivateRoute from './Components/PrivateRoute';
@@ -42,6 +47,22 @@ function App() {
           <Route path='/' element={
             <Suspense fallback={<Loader />}>
               <Gate />
+            </Suspense>
+          }></Route>
+          <Route path='/vision' element={
+            <Suspense fallback={<Loader />}>
+              {/* <Vission /> */}
+              <Vh />
+            </Suspense>
+          }></Route>
+          <Route path='/infrastructure' element={
+            <Suspense fallback={<Loader />}>
+              <Infrastructure />
+            </Suspense>
+          }></Route>
+           <Route path='/pharmacy' element={
+            <Suspense fallback={<Loader />}>
+              <Pharmacy />
             </Suspense>
           }></Route>
           <Route path='/h' element={
